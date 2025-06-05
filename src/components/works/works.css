@@ -20,34 +20,82 @@
     font-weight: 300;
     font-size: 1rem;
     max-width: 45rem;
+    margin-bottom: 2rem;
 }
 
+/* Container for all project cards */
 .worksImgs {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    width: 100vw;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
     max-width: 65rem;
 }
 
+/* Each individual project card */
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    width: 18rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.projectCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Project image inside the card */
 .worksImg {
     object-fit: cover;
-    height: 20rem;
-    margin: 0.5rem;
+    height: 12rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
+/* Title below each project image */
+.projectTitle {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* See More Button */
 .workBtn {
     margin: 3rem 0;
-    padding: 0.5rem 2.5rem;
+    padding: 0.6rem 2rem;
     border: none;
     border-radius: 2rem;
-    background: white;
+    background: #ffffff;
     font-size: 1rem;
+    font-weight: 500;
+    color: #000000;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-@media screen and (max-width:585px) {
+.workBtn:hover {
+    background: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 585px) {
+    .projectCard {
+        width: 90%;
+    }
+
     .worksImg {
-        height: 48vw;
+         height: 48vw;
+        max-height: 50vw;
     }
 }

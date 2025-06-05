@@ -8,30 +8,32 @@ const Skills = () => {
     return (
         <section id='skills'>
             <span className="skillTitle">What I do</span>
-            <span className="skillDesc">I am a skilled and passionate web designer with experience in creating visually appealing and user-friendly websites. I have a strong understanding of design and a keen eye for detail. I am proficient in HTML, CSS, and JavaScript, as well as design software such as Adobe Photoshop and Illustrator.</span>
-            <div className="skillBars">
-                <div className="skillBar">
-                    <img src={UIDesign} alt="UIDesign" className="skillBarImg" />
-                    <div className="skillBarText">
-                        <h2>UI/UX Design</h2>
-                        <p>This is a demo text, you can write your own content here.</p>
-                    </div>
-                </div>
-                <div className="skillBar">
-                    <img src={WebDesign} alt="WebDesign" className="skillBarImg" />
-                    <div className="skillBarText">
-                        <h2>Website Design</h2>
-                        <p>This demo text can be changed while making the production ready website.</p>
-                    </div>
-                </div>
-                <div className="skillBar">
-                    <img src={AppDesign} alt="AppDesign" className="skillBarImg" />
-                    <div className="skillBarText">
-                        <h2>App Design</h2>
-                        <p>You can write text related to mobile app development.</p>
-                    </div>
-                </div>
-            </div>
+            <span className="skillDesc">
+                I design and optimize data pipelines for seamless data flow and analytics. With strong skills in SQL, Python, and tools like Airflow, Spark, and Kafka, I automate workflows and support scalable solutions on AWS and GCP. I also use Power BI, Tableau, and Jupyter for impactful data visualization that informs decisions.
+            </span><div className="skillBars">
+    <div className="skillBar">
+        <img src={UIDesign} alt="ETLTools" className="skillBarImg" />
+        <div className="skillBarText">
+            <h2>ETL & Data Pipelines</h2>
+            <p>Experienced in building scalable pipelines using Apache Airflow, Talend, and dbt for clean, reliable data flows.</p>
+        </div>
+    </div>
+    <div className="skillBar">
+        <img src={WebDesign} alt="DataWarehousing" className="skillBarImg" />
+        <div className="skillBarText">
+            <h2>Data Warehousing</h2>
+            <p>Skilled in designing and querying warehouses using BigQuery, Snowflake, and Amazon Redshift to power analytics.</p>
+        </div>
+    </div>
+    <div className="skillBar">
+        <img src={AppDesign} alt="AnalyticsTools" className="skillBarImg" />
+        <div className="skillBarText">
+            <h2>Analytics & BI Tools</h2>
+            <p>Proficient in Power BI, Tableau, and Looker to transform data into compelling visual dashboards and insights.</p>
+        </div>
+    </div>
+</div>
+
         </section>
     );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './works.css';
 import Portfolio1 from '../../assets/portfolio-1.png';
 import Portfolio2 from '../../assets/portfolio-2.png';
@@ -8,21 +8,68 @@ import Portfolio5 from '../../assets/portfolio-5.png';
 import Portfolio6 from '../../assets/portfolio-6.png';
 
 const Works = () => {
+    const [showMore, setShowMore] = useState(false);
+
     return (
         <section id='works'>
             <h2 className="worksTitle">My Portfolio</h2>
-            <span className="worksDesc">I take pride in paying attention to the smallest details and making sure that my work is pixel perfect. I am excited to bring my skills and experience to help businesses achieve their goals and create a strong online presence.</span>
+            <span className="worksDesc">
+                I build robust data pipelines, automate workflows, and design scalable solutions that turn raw data into actionable insights—empowering teams to make smarter, faster decisions.
+            </span>
+
             <div className="worksImgs">
-                <img src={Portfolio1} alt="" className="worksImg" />
-                <img src={Portfolio2} alt="" className="worksImg" />
-                <img src={Portfolio3} alt="" className="worksImg" />
-                <img src={Portfolio4} alt="" className="worksImg" />
-                <img src={Portfolio5} alt="" className="worksImg" />
-                <img src={Portfolio6} alt="" className="worksImg" />
+                <a href="https://github.com/HillaryOnyango/BuyHouse" target="_blank" rel="noopener noreferrer">
+                    <div className="projectCard">
+                        <img src={Portfolio1} alt="Data Pipeline Project" className="worksImg" />
+                        <p className="projectTitle">ETL Pipeline with Airflow</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/HillaryOnyango/BuyHouse" target="_blank" rel="noopener noreferrer">
+                    <div className="projectCard">
+                        <img src={Portfolio2} alt="Real-Time Streaming" className="worksImg" />
+                        <p className="projectTitle">Kafka Real-Time Stream</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/HillaryOnyango/BuyHouse" target="_blank" rel="noopener noreferrer">
+                    <div className="projectCard">
+                        <img src={Portfolio3} alt="Data Warehouse" className="worksImg" />
+                        <p className="projectTitle">Data Warehouse with Snowflake</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/HillaryOnyango/BuyHouse" target="_blank" rel="noopener noreferrer">
+                    <div className="projectCard">
+                        <img src={Portfolio4} alt="Analytics Dashboard" className="worksImg" />
+                        <p className="projectTitle">Analytics Dashboard (Tableau)</p>
+                    </div>
+                </a>
+
+                {showMore && (
+                    <>
+                        <a href="https://github.com/HillaryOnyango/BuyHouse" target="_blank" rel="noopener noreferrer">
+                            <div className="projectCard">
+                                <img src={Portfolio5} alt="Data Lake" className="worksImg" />
+                                <p className="projectTitle">Data Lake Architecture</p>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/HillaryOnyango/BuyHouse" target="_blank" rel="noopener noreferrer">
+                            <div className="projectCard">
+                                <img src={Portfolio6} alt="Cloud ETL" className="worksImg" />
+                                <p className="projectTitle">Cloud ETL with GCP</p>
+                            </div>
+                        </a>
+                    </>
+                )}
             </div>
-            <button className="workBtn">See More</button>
+
+            <button className="workBtn" onClick={() => setShowMore(!showMore)}>
+                {showMore ? 'Show Less' : 'See More'}
+            </button>
         </section>
     );
-}
+};
 
 export default Works;
