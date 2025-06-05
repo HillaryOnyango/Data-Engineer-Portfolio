@@ -89,13 +89,13 @@
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 585px) {
+@media screen and (max-width: 768px) {
     .projectCard {
         width: 90%;
     }
 
     .worksImg {
-         height: 48vw;
+        height: auto;
         max-height: 50vw;
     }
 }
