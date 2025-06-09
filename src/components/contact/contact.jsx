@@ -38,6 +38,14 @@ const Contact = () => {
                     <textarea name='message' placeholder='Your Message' rows={5} className='msg'></textarea>
                     <button type='submit' value='Send' className='submitBtn'>Submit</button>
                 </form>
+
+                
+                <div className='social-icons'>
+                    <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer'><i className='fab fa-linkedin-in'></i></a>
+                    <a href='https://github.com' target='_blank' rel='noopener noreferrer'><i className='fab fa-github'></i></a>
+                    <a href='https://x.com' target='_blank' rel='noopener noreferrer'><i className='fab fa-x-twitter'></i></a>
+                    <a href='mailto:example@email.com'><i className='fas fa-envelope'></i></a>
+                </div>
             </div>
         </div>
     );

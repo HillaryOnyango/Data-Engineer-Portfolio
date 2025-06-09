@@ -8,7 +8,7 @@
     justify-content: center;
     text-align: center;
     margin: 0 auto;
-    padding-bottom: 2rem; /* Added to give space at the bottom */
+    padding-bottom: 2rem;
 }
 
 .skillTitle {
@@ -16,7 +16,7 @@
     font-weight: 600;
     padding-top: 3rem;
     margin-bottom: 1rem;
-    color: #ffffff; /* Adjust if needed for visibility */
+    color: #ffffff;
 }
 
 .skillDesc {
@@ -25,7 +25,7 @@
     max-width: 60rem;
     padding: 0 2rem;
     line-height: 1.8;
-    color: #e0e0e0; /* Softer white for readability on dark backgrounds */
+    color: #e0e0e0;
 }
 
 .skillBars {
@@ -55,7 +55,54 @@
     font-weight: 200;
 }
 
-/* Media Queries for Responsiveness */
+/* --- Tools Section --- */
+.toolsSection {
+    margin-top: 3rem;
+    width: 100%;
+    text-align: center;
+}
+
+.toolsTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.toolsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 2rem;
+}
+
+.toolItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+}
+
+.toolLogo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.toolLogo:hover {
+    transform: scale(1.1);
+}
+
+.toolItem span {
+    font-size: 0.85rem;
+    color: #e0e0e0;
+    margin-top: 0.2rem;
+}
+
+/* --- Responsive Styling --- */
 @media screen and (max-width: 720px) {
     .skillBarText > p {
         font-size: 2vw;
@@ -84,4 +131,56 @@
     .skillBarText > h2 {
         font-size: 5vw;
     }
+
+    .toolLogo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .toolItem span {
+        font-size: 0.75rem;
+    }
 }
+.toolsSection {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.toolsTitle {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.toolsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.toolItem {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    background-color: #fff; /* Changed from dark to light background */
+    transition: transform 0.2s ease-in-out;
+    padding: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Optional shadow */
+}
+
+.toolItem:hover {
+    transform: scale(1.1);
+    background-color: #f0f0f0;
+}
+
+.toolLogo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: normal; /* Changed from multiply to normal */
+}
+
