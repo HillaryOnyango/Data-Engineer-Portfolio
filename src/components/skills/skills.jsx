@@ -32,7 +32,7 @@ const Skills = () => {
 
     return (
         <section id='skills'>
-            <span className="skillTitle">What I do</span>
+            <span className="skillTitle">About Me </span>
             <span className="skillDesc">
                 I design and optimize data pipelines for seamless data flow and analytics. With strong skills in SQL, Python, and tools like Airflow, Spark, and Kafka, I automate workflows and support scalable solutions on AWS and GCP. I also use Power BI, Tableau, and Jupyter for impactful data visualization that informs decisions.
             </span>

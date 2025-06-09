@@ -44,7 +44,7 @@ const Contact = () => {
                     <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer'><i className='fab fa-linkedin-in'></i></a>
                     <a href='https://github.com/HillaryOnyango' target='_blank' rel='noopener noreferrer'><i className='fab fa-github'></i></a>
                     <a href='https://x.com/amolo_hillary' target='_blank' rel='noopener noreferrer'><i className='fab fa-x-twitter'></i></a>
-                    <a href='mailto:hillaryonyango19@gmail.com@email.com'><i className='fas fa-envelope'></i></a>
+                    <a href='mailto:hillaryonyango19@gmail.com@gmail.com'><i className='fas fa-envelope'></i></a>
                 </div>
             </div>
         </div>
