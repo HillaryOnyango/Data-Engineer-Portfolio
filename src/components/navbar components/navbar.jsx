@@ -1,7 +1,6 @@
 import React from 'react';
 import './navbar.css';
 import logo from '../../assets/logo.png';
-import contactImg from '../../assets/contact.png';
 import btnImg from '../../assets/hireme.png';
 import { Link } from 'react-scroll';
 
@@ -72,7 +71,7 @@ function Navbar() {
           document.getElementById('contactPage').scrollIntoView({ behavior: 'smooth' })
         }
       >
-        <img src={btnImg} alt="Hire Me" className="btnImg" /> Hire Me
+        <img src={btnImg} alt="Contact Me" className="btnImg" /> Hire Me
       </button>
     </nav>
   );

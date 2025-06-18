@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.698d5008.css",
+    "main.js": "/static/js/main.8cd4a546.js",
+    "static/media/image.png": "/static/media/image.00cdf3615da8d4c54ace.png",
+    "static/media/website-design.png": "/static/media/website-design.379549bdaa28b10a4599.png",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/portfolio-6.png": "/static/media/portfolio-6.4a10fac7d271e87859e9.png",
+    "static/media/portfolio-2.png": "/static/media/portfolio-2.33d06b368b4e6395030e.png",
+    "static/media/portfolio-4.png": "/static/media/portfolio-4.8e8bac5e33dc3f211e2b.png",
+    "static/media/portfolio-1.png": "/static/media/portfolio-1.b33adf772d54ab33e953.png",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/portfolio-5.png": "/static/media/portfolio-5.bf754db8618dd60ec6f1.png",
+    "static/media/portfolio-3.png": "/static/media/portfolio-3.ca4192894d93b08ad3b5.png",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/tableau.png": "/static/media/tableau.7f4c397acd13f7bfc490.png",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/ui-design.png": "/static/media/ui-design.9c08ef01980257992501.png",
+    "static/media/logo.png": "/static/media/logo.df933f6d3ff2867bcb5c.png",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/sql.png": "/static/media/sql.ea5e67976de4ae88ebcf.png",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "index.html": "/index.html",
+    "main.698d5008.css.map": "/static/css/main.698d5008.css.map",
+    "main.8cd4a546.js.map": "/static/js/main.8cd4a546.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.698d5008.css",
+    "static/js/main.8cd4a546.js"
+  ]
+}
