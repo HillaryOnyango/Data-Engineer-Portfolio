@@ -1,77 +1,111 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './navbar.css';
 import logo from '../../assets/logo.png';
 import btnImg from '../../assets/hireme.png';
 import { Link } from 'react-scroll';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 function Navbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const scrollOffset = -70;
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  const navLinks = (
+    <>
+      <Link
+        activeClass="active"
+        to="intro"
+        spy={true}
+        smooth={true}
+        offset={scrollOffset}
+        duration={500}
+        className="desktopMenuListItem"
+        onClick={closeMobileMenu}
+      >
+        Home
+      </Link>
+      <Link
+        activeClass="active"
+        to="skills"
+        spy={true}
+        smooth={true}
+        offset={scrollOffset}
+        duration={500}
+        className="desktopMenuListItem"
+        onClick={closeMobileMenu}
+      >
+        About
+      </Link>
+      <Link
+        activeClass="active"
+        to="works"
+        spy={true}
+        smooth={true}
+        offset={scrollOffset}
+        duration={500}
+        className="desktopMenuListItem"
+        onClick={closeMobileMenu}
+      >
+        Portfolio
+      </Link>
+      <Link
+        activeClass="active"
+        to="articles"
+        spy={true}
+        smooth={true}
+        offset={scrollOffset}
+        duration={500}
+        className="desktopMenuListItem"
+        onClick={closeMobileMenu}
+      >
+        Articles
+      </Link>
+    </>
+  );
 
   return (
     <nav className="navbar">
       <img src={logo} alt="Logo" className="logo" />
-      <div className="desktopMenu">
-        {/* Home Link - targets the 'intro' section */}
-        <Link
-          activeClass="active"
-          to="intro"
-          spy={true}
-          smooth={true}
-          offset={scrollOffset}
-          duration={500}
-          className="desktopMenuListItem"
-        >
-          Home
-        </Link>
 
+      {/* Desktop Navigation */}
+      <div className="desktopMenu">{navLinks}</div>
 
-        <Link
-          activeClass="active"
-          to="skills"
-          spy={true}
-          smooth={true}
-          offset={scrollOffset}
-          duration={500}
-          className="desktopMenuListItem"
-        >
-          About
-        </Link>
-
-        {/* Portfolio Link - targets the 'works' section */}
-        <Link
-          activeClass="active"
-          to="works" // ID from your Works (Portfolio) component
-          spy={true}
-          smooth={true}
-          offset={scrollOffset}
-          duration={500}
-          className="desktopMenuListItem"
-        >
-          Portfolio
-        </Link>
-
-        {/* Articles Link - targets the 'articles' section */}
-        <Link
-          activeClass="active"
-          to="articles" // ID from your Articles component
-          spy={true}
-          smooth={true}
-          offset={scrollOffset}
-          duration={500}
-          className="desktopMenuListItem"
-        >
-          Articles
-        </Link>
+      {/* Hamburger Menu Icon - only visible on mobile */}
+      <div className="mobMenu" onClick={toggleMobileMenu}>
+        {isMobileMenuOpen ? <FaTimes color="white" size={24} /> : <FaBars color="white" size={24} />}
       </div>
 
-      {/* Hire Me Button - already correctly targets 'contactPage' */}
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div className="navMenu">
+          {navLinks}
+          <button
+            className="mobileMenuBtn"
+            onClick={() => {
+              document.getElementById('contactPage').scrollIntoView({ behavior: 'smooth' });
+              closeMobileMenu();
+            }}
+          >
+            <img src={btnImg} alt="Contact Me" className="desktopMenuImg" /> Contact Me
+          </button>
+        </div>
+      )}
+
+      {/* Desktop Button */}
       <button
-        className="btn"
+        className="desktopMenuBtn"
         onClick={() =>
           document.getElementById('contactPage').scrollIntoView({ behavior: 'smooth' })
         }
       >
-        <img src={btnImg} alt="Contact Me" className="btnImg" /> Hire Me
+        <img src={btnImg} alt="Contact Me" className="desktopMenuImg" /> Contact Me
       </button>
     </nav>
   );

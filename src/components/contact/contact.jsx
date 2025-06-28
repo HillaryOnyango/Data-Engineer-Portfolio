@@ -40,7 +40,7 @@ const Contact = () => {
                 </form>
 
                 <div className='social-icons'>
-                    <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer'>
+                    <a href='https://www.linkedin.com/in/amolo-hillary-118b3b371/' target='_blank' rel='noopener noreferrer'>
                         <i className='fab fa-linkedin-in'></i>
                     </a>
                     <a href='https://github.com/HillaryOnyango' target='_blank' rel='noopener noreferrer'>

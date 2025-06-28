@@ -54,7 +54,9 @@
     max-width: 60rem;
 }
 
-.name, .email, .msg {
+.name,
+.email,
+.msg {
     font-size: medium;
     width: 100%;
     max-width: 40rem;
@@ -68,10 +70,35 @@
 
 .submitBtn {
     background: white;
+    color: black;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     margin: 2rem;
-    padding: 0.75rem 3.5rem;
+    padding: 0.6rem 2.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: auto;
+}
+
+.submitBtn:hover {
+    background: linear-gradient(135deg, #00d4ff, #00b8d4);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 212, 255, 0.4);
+}
+
+.submitBtn:active {
+    background: linear-gradient(135deg, #00b8d4, #0097a7);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 212, 255, 0.35);
 }
 
 .links {
