@@ -63,7 +63,7 @@ const Skills = () => {
 
             {/* Tools Section */}
             <div className="toolsSection">
-                <h2 className="toolsTitle">Tools I Use</h2>
+                <h2 className="toolsTitle">Tech Stack </h2>
                 <div className="toolsGrid">
                     {toolLogos.map((tool, index) => (
                         <div className="toolItem" key={index}>

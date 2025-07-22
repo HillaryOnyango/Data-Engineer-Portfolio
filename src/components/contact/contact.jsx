@@ -17,7 +17,7 @@ const Contact = () => {
             (result) => {
                 console.log(result.text);
                 e.target.reset();
-                alert('Email Sent!');
+                alert('Email Sent to hillaryonyango19@gmail.com!   Thank you for reaching out.  I will get back to you as soon as possible.');
             },
             (error) => {
                 console.log(error.text);
