@@ -14,6 +14,16 @@
     z-index: -1;
     object-fit: cover;
     height: 100vh;
+
+    /* 👇 Added styles to soften edges */
+    border-radius: 2rem;  /* rounded edges */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45); /* soft shadow */
+    
+    /* optional: fade left edge into dark background */
+    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to left, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
 }
 
 .introContent {
@@ -84,7 +94,8 @@
 .btn:hover {
     background: linear-gradient(135deg, #00ffae, #1e90ff);
     color: white;
-    box-shadow: 0 0 10px rgba(0, 255, 174, 0.3), 0 0 15px rgba(30, 144, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 255, 174, 0.3), 
+                0 0 15px rgba(30, 144, 255, 0.3);
     transform: translateY(-2px);
 }
 
