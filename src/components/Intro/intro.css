@@ -9,32 +9,34 @@
 
 .bg {
     position: absolute;
-    top: -4rem;
+    top: 0;
     right: 0;
     z-index: -1;
-    object-fit: cover;
-    height: 100vh;
+    /* Let the image keep its aspect ratio and avoid blurring */
+    width: clamp(30rem, 40vw, 60rem);
+    height: auto;
+    object-fit: contain;
+    image-rendering: auto; /* prefer browser default scaling */
 
-    /* 👇 Added styles to soften edges */
-    border-radius: 2rem;  /* rounded edges */
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45); /* soft shadow */
-    
-    /* optional: fade left edge into dark background */
-    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
-            mask-image: linear-gradient(to left, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
-    -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
+    /* remove rounded corners, heavy shadow and mask to keep a crisp image */
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-mask-image: none;
+        mask-image: none;
 }
 
 .introContent {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
     padding: 2rem;
     font-size: 3rem;
     font-weight: 700;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* ensure content sits above the background image */
+    position: relative;
+    z-index: 1;
 }
 
 .hello {
@@ -102,11 +104,13 @@
 /* --- Responsive Adjustments --- */
 @media screen and (max-width: 840px) {
     .bg {
-        right: -10vw;
+        position: absolute;
+        right: -5vw;
+        width: clamp(18rem, 45vw, 40rem);
     }
 
     .introContent {
-        font-size: 10vw;
+        font-size: 8vw;
     }
 
     .hello {
@@ -125,7 +129,8 @@
 }
 
 @media screen and (max-width: 480px) {
+    /* On small phones, hide the decorative image to avoid crowding */
     .bg {
-        right: -20vw;
+        display: none;
     }
 }
