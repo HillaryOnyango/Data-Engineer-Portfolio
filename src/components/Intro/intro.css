@@ -1,0 +1,136 @@
+#intro {
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    /* Let the image keep its aspect ratio and avoid blurring */
+    width: clamp(30rem, 40vw, 60rem);
+    height: auto;
+    object-fit: contain;
+    image-rendering: auto; /* prefer browser default scaling */
+
+    /* remove rounded corners, heavy shadow and mask to keep a crisp image */
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-mask-image: none;
+        mask-image: none;
+}
+
+.introContent {
+    min-height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* ensure content sits above the background image */
+    position: relative;
+    z-index: 1;
+}
+
+.hello {
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.introName {
+    color: yellow;
+}
+
+.introPara {
+    font-size: medium;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* --- Buttons Row --- */
+.buttonRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* --- Shared Button Style --- */
+.btn {
+    background: white;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none; /* makes <a> look like a button */
+}
+
+/* --- Resume Button Specific Adjustments --- */
+.resumeBtn {
+    margin-left: clamp(1rem, 4vw, 2rem);
+}
+
+/* Optional: Better scaling for resume icon */
+.btnImg {
+    height: 1.2rem;
+    width: 1.2rem;
+    object-fit: contain;
+}
+
+/* Hover style for both buttons */
+.btn:hover {
+    background: linear-gradient(135deg, #00ffae, #1e90ff);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 255, 174, 0.3), 
+                0 0 15px rgba(30, 144, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* --- Responsive Adjustments --- */
+@media screen and (max-width: 840px) {
+    .bg {
+        position: absolute;
+        right: -5vw;
+        width: clamp(18rem, 45vw, 40rem);
+    }
+
+    .introContent {
+        font-size: 8vw;
+    }
+
+    .hello {
+        font-size: 4.5vw;
+    }
+
+    .buttonRow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resumeBtn {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* On small phones, hide the decorative image to avoid crowding */
+    .bg {
+        display: none;
+    }
+}
