@@ -53,7 +53,7 @@ function Navbar() {
         className="desktopMenuListItem"
         onClick={closeMobileMenu}
       >
-        Portfolio
+        Projects
       </Link>
       <Link
         activeClass="active"

@@ -12,30 +12,30 @@ const Works = () => {
 
     return (
         <section id='works'>
-            <h2 className="worksTitle">My Portfolio</h2>
+            <h2 className="worksTitle"> Latest Projects</h2>
             <span className="worksDesc">
                 I build robust data pipelines, automate workflows, and design scalable solutions that turn raw data into actionable insights—empowering teams to make smarter, faster decisions.
             </span>
 
             <div className="worksImgs">
-                <a href="https://github.com/HillaryOnyango/BuyHouse" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/HillaryOnyango/Japan-Car-Import-Advisory-Platform" target="_blank" rel="noopener noreferrer">
                     <div className="projectCard">
                         <img src={Portfolio1} alt="Data Pipeline Project" className="worksImg" />
-                        <p className="projectTitle">ETL Pipeline with Airflow</p>
+                        <p className="projectTitle">Japan-Car-Import-Advisory-Platform</p>
                     </div>
                 </a>
 
                 <a href="https://github.com/HillaryOnyango/BuyHouse" target="_blank" rel="noopener noreferrer">
                     <div className="projectCard">
                         <img src={Portfolio2} alt="Real-Time Streaming" className="worksImg" />
-                        <p className="projectTitle">Kafka Real-Time Stream</p>
+                        <p className="projectTitle">Formula-1-Race-Outcome-Prediction</p>
                     </div>
                 </a>
 
-                <a href="https://github.com/HillaryOnyango/BuyHouse" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/HillaryOnyango/Global-Energy-Price-Data-Engineering-Platform-II" target="_blank" rel="noopener noreferrer">
                     <div className="projectCard">
                         <img src={Portfolio3} alt="Data Warehouse" className="worksImg" />
-                        <p className="projectTitle">Data Warehouse with Snowflake</p>
+                        <p className="projectTitle">Global-Energy-Price-Data-Engineering-Platform-II</p>
                     </div>
                 </a>
 
